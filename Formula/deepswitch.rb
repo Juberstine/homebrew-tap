@@ -1,26 +1,26 @@
 class Deepswitch < Formula
   desc "Safely switch Codex between OpenAI and DeepSeek"
   homepage "https://github.com/Juberstine/deepswitch"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Juberstine/deepswitch/releases/download/v0.1.1/deepswitch-macos-aarch64.tar.gz"
-      sha256 "c85137452f71d50f90685fad552f2f28d352a8cc46423872c0fa4e4b85c49979"
+      url "https://github.com/Juberstine/deepswitch/releases/download/v0.2.0/deepswitch-macos-aarch64.tar.gz"
+      sha256 "5afad672ea44a2690672cd52155635600d31edae09b4878aaeed165a81f6165d"
     else
-      url "https://github.com/Juberstine/deepswitch/releases/download/v0.1.1/deepswitch-macos-x86_64.tar.gz"
-      sha256 "e40495e45044fdc60c946830ff227fa6efef91758db9388fdba8399b724be6bd"
+      url "https://github.com/Juberstine/deepswitch/releases/download/v0.2.0/deepswitch-macos-x86_64.tar.gz"
+      sha256 "76b8af2035821cf00c851511af5381262ffccd1ab5ee502d8c6c78fcff4f04c4"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/Juberstine/deepswitch/releases/download/v0.1.1/deepswitch-linux-aarch64.tar.gz"
-      sha256 "e9103ae26ca643656536011da3402986c62d96c10a585944afbebf9bb5d51214"
+      url "https://github.com/Juberstine/deepswitch/releases/download/v0.2.0/deepswitch-linux-aarch64.tar.gz"
+      sha256 "d9030fad4814c8515795f20b2c4be9ddc9c48e70499b88f922a84e41ab84ec2a"
     else
-      url "https://github.com/Juberstine/deepswitch/releases/download/v0.1.1/deepswitch-linux-x86_64.tar.gz"
-      sha256 "cc27b33d574c2866d206f01afafae668ca167c39cdc991b8ac95b458c3ac2488"
+      url "https://github.com/Juberstine/deepswitch/releases/download/v0.2.0/deepswitch-linux-x86_64.tar.gz"
+      sha256 "f4a9d835def3330954ab80ba85c5b23edc759afe1e3046509b4bd6b9277514d3"
     end
   end
 

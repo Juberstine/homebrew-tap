@@ -12,3 +12,6 @@ Upgrade to the latest release:
 brew update
 brew upgrade deepswitch
 ```
+
+The tap records the former formula name so Homebrew can migrate existing
+`codex-deepseek-switcher` installations to `deepswitch`.

@@ -1,0 +1,32 @@
+name: Open formula PR
+
+on:
+  push:
+    branches:
+      - "bots/**"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  open-pr:
+    name: Open pull request
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Open or reuse pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="${GITHUB_REF_NAME}"
+          title="$(git log -1 --pretty=%s)"
+          if gh pr view "$branch" --json number --jq .number >/dev/null 2>&1; then
+            echo "Pull request already exists for ${branch}"
+            exit 0
+          fi
+
+          body='Automated DeepSwitch formula update.
+
+          Review after **Formula (macOS)** passes, then approve and squash-merge.'
+          gh pr create --base main --head "$branch" --title "$title" --body "$body"

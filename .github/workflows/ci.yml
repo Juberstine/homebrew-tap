@@ -17,8 +17,8 @@ jobs:
       - name: Add local tap
         run: brew tap Juberstine/tap "$GITHUB_WORKSPACE"
       - name: Audit formula
-        run: brew audit --strict Juberstine/tap/codex-deepseek-switcher
+        run: brew audit --strict Juberstine/tap/deepswitch
       - name: Install and test formula
         run: |
-          brew install Juberstine/tap/codex-deepseek-switcher
-          brew test Juberstine/tap/codex-deepseek-switcher
+          brew install Juberstine/tap/deepswitch
+          brew test Juberstine/tap/deepswitch

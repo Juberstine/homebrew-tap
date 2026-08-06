@@ -1,31 +1,31 @@
 class Deepswitch < Formula
   desc "Safely switch Codex between OpenAI and DeepSeek"
   homepage "https://github.com/Juberstine/deepswitch"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/Juberstine/deepswitch/releases/download/v0.1.0/codex-deepseek-switcher-macos-aarch64.tar.gz"
-      sha256 "370ef7bf0628969925e5e7a7fe19cc3e5de399d0d94ea271ec73ee048fde4104"
+      url "https://github.com/Juberstine/deepswitch/releases/download/v0.1.1/deepswitch-macos-aarch64.tar.gz"
+      sha256 "c85137452f71d50f90685fad552f2f28d352a8cc46423872c0fa4e4b85c49979"
     else
-      url "https://github.com/Juberstine/deepswitch/releases/download/v0.1.0/codex-deepseek-switcher-macos-x86_64.tar.gz"
-      sha256 "32e9da592a83d09f716be35c1b8cbd8cc0063e2f6889813d7720f3d601d1d6ba"
+      url "https://github.com/Juberstine/deepswitch/releases/download/v0.1.1/deepswitch-macos-x86_64.tar.gz"
+      sha256 "e40495e45044fdc60c946830ff227fa6efef91758db9388fdba8399b724be6bd"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/Juberstine/deepswitch/releases/download/v0.1.0/codex-deepseek-switcher-linux-aarch64.tar.gz"
-      sha256 "80f9cff09936057972f4aca6b1e86a7de980be92cb69673ba51b09ae4f5c91e5"
+      url "https://github.com/Juberstine/deepswitch/releases/download/v0.1.1/deepswitch-linux-aarch64.tar.gz"
+      sha256 "e9103ae26ca643656536011da3402986c62d96c10a585944afbebf9bb5d51214"
     else
-      url "https://github.com/Juberstine/deepswitch/releases/download/v0.1.0/codex-deepseek-switcher-linux-x86_64.tar.gz"
-      sha256 "632082976ac5c310a40e89b97238640168e30dd292311fe4cacff4a75d602ff6"
+      url "https://github.com/Juberstine/deepswitch/releases/download/v0.1.1/deepswitch-linux-x86_64.tar.gz"
+      sha256 "cc27b33d574c2866d206f01afafae668ca167c39cdc991b8ac95b458c3ac2488"
     end
   end
 
   def install
-    bin.install "codex-deepseek-switcher" => "deepswitch"
+    bin.install "deepswitch"
     bin.install_symlink "deepswitch" => "codex-deepseek-switcher"
   end
 
